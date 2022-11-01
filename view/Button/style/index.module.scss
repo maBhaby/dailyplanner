@@ -1,0 +1,20 @@
+.default {
+  min-height: 56px;
+  width: 100%;
+  background-color: var(--content-gray);
+  color: var(--white);
+  border-radius: 10px;
+  padding: 10px;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  transition: var(--m-delay);
+  &:hover {
+    background-color: var(--hover-dark);
+  }
+  &[disabled]:not([disabled='false']) {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
