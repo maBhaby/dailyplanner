@@ -1,6 +1,32 @@
+@import '../../../styles/utils/utils.scss';
+
 .todos {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   height: 100%;
+  gap:20px;
+  &__item{
+  }
+  &__data{
+    @include flex(sc);
+    @include font(20);
+    font-weight: 600;
+    height: 52px;
+    border-bottom: 2px solid var(--hover-dark);
+    letter-spacing: 0px;
+    &_day{
+      opacity: .2;
+    }
+  }
+  &__body{
+    height: 100%;
+    background: top url('../../../assets/image/line.svg');
+    min-height: 420px;
+  }
+}
+.test{
+  &:focus{
+    background-color: red;
+  }
 }

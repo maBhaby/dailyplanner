@@ -5,11 +5,11 @@ import { numToMonth } from '../../utils';
 import AvatarComponent from '../../components/AvatarComponent';
 
 const DailyHeader = () => {
-  const thisMonth = numToMonth(dayjs().format('M'));
+  const thisMonth = numToMonth(dayjs().format('M YYYY'));
 
   return (
     <header className={style.header}>
-      <h2>{thisMonth}</h2>
+      <h2 className={style.header__title}>{thisMonth}</h2>
       <div className={style.header__right}>
         <AvatarComponent />
         <div>Settings</div>

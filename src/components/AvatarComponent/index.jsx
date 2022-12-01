@@ -6,11 +6,12 @@ import AvatarView from '../../view/AvatarView';
 const AvatarComponent = () => {
   const [accountData, setAccountData] = useState(null);
 
+
   useEffect(() => {
     setAccountData(getDataUser(auth.currentUser));
-  }, []);
+  }, [auth]);
 
-  return <AvatarView accountData={accountData} />;
+  return <AvatarView {...accountData} />;
 };
 
 export default AvatarComponent;

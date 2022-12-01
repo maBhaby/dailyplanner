@@ -9,6 +9,7 @@
   --label-content: #6b6e85;
   --error-color: #ecaca5;
   --negative-color: #d44333;
+  --todo-hover: #5167f466;
 
   --m-delay: 0.3s;
 }
@@ -49,4 +50,7 @@ img {
   width: 100%;
   height: auto;
   display: block;
+}
+input{
+  outline: none !important;
 }
