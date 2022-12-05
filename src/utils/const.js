@@ -27,3 +27,7 @@ export const MONTHS_ENUM = [
   'Ноябрь',
   'Декабрь',
 ];
+
+export const MODAL_TYPE = {
+  USER_DATA: 'userData'
+}

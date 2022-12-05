@@ -3,9 +3,9 @@ import style from './style/index.module.scss';
 import cn from 'classnames';
 import { sliceStr } from '../../utils';
 
-const AvatarView = ({email}) => {
+const AvatarView = ({email, openModal}) => {
   return (
-    <div>
+    <div onClick={openModal}>
       {
         email && <button className={cn('btn_reset', style.avatar__btn)}>{sliceStr(email)}</button>
       }

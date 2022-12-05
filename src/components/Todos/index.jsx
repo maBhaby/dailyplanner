@@ -1,16 +1,15 @@
-import React, {useEffect} from 'react';
+import React, { useEffect, useState } from 'react';
 import { signOut } from 'firebase/auth';
-import { doc, setDoc } from 'firebase/firestore';
+import { doc, getDoc } from "firebase/firestore";
 import { auth, db } from '../../db/firebase';
 import Todos from '../../view/Todos';
 
 const TodosComponent = () => {
+  const [todos, setTodos] = useState([])
+
   useEffect(() => {
-    setDoc(doc(db, 'artemColl/2021-11-1'), {
-      todos:[
-        'test'
-      ]
-    })
+    getDoc(doc(db, 'artemColl', '2021-11-1'))
+      .then((response) => setTodos(response.data()))
   }, [])
 
   const handelClick = () => {
@@ -24,7 +23,7 @@ const TodosComponent = () => {
       });
   };
 
-  return <Todos buttonClick={handelClick} />;
+  return <Todos todos={todos} buttonClick={handelClick} />;
 };
 
 export default TodosComponent;

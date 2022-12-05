@@ -6,7 +6,7 @@ const testArray = [
   {
     data: '1.1',
     day:'Пн',
-    todos:[
+    rep:[
       {
         par: 1
       }
@@ -34,11 +34,11 @@ const testArray = [
   },
 ]
 
-const Todos = ({ buttonClick }) => {
+const Todos = ({ buttonClick, todos }) => {
   return (
     <ul className={styles.todos}>
       {
-        testArray.map(({data, day, todos}, i) => (
+        testArray.map(({data, day}, i) => (
           <li key={i} className={styles.todos__item}>
             <div className={styles.todos__data}>
               <span onClick={buttonClick}>{data}</span>
