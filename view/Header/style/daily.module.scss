@@ -1,9 +1,0 @@
-@import '../../../styles/utils/utils.scss';
-
-.header {
-  @include flex(sc);
-  &__right {
-    display: flex;
-    gap: 20px;
-  }
-}

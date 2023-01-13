@@ -1,0 +1,58 @@
+:root {
+  --white: #fff;
+  --bc-gray-register: #fafafb;
+  --black-primery: #030235;
+  --hover-dark: #161318;
+  --states-hover: #fafafb;
+  --content-gray: #030235;
+  --border-gray: #59647629;
+  --label-content: #6b6e85;
+  --error-color: #ecaca5;
+  --negative-color: #d44333;
+  --todo-hover: #5167f466;
+  --bc-black-modal:#00000069;
+  --bc-accont-modal:#e5d7fa;
+
+  --m-delay: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bc-gray-register);
+  height: 100%;
+  font-size: 16px;
+  line-height: 120%;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.btn_reset {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+input{
+  outline: none !important;
+}

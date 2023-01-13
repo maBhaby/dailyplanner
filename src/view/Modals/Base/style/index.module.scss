@@ -1,0 +1,16 @@
+@import '../../../../styles/utils/utils.scss';
+
+.base_modal{
+    position: fixed;
+    inset: 0 0 0 0;
+    background-color: var(--bc-black-modal);
+    @include flex(cc);
+    padding: 0 15px;
+    &__userData{
+        max-width: 512px;
+        width: 100%;
+        padding: 30px;
+        border-radius: 10px;
+        background-color: var(--bc-accont-modal);
+    }
+}
