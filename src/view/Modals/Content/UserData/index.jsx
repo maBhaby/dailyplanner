@@ -1,6 +1,7 @@
 import React from 'react';
 import style from '../style/index.module.scss'
 
+
 const UserData = () => {
   return (
     <div  className={style.user_data}>

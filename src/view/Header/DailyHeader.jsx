@@ -12,7 +12,7 @@ const DailyHeader = () => {
       <h2 className={style.header__title}>{thisMonth}</h2>
       <div className={style.header__right}>
         <AvatarComponent />
-        <div>Settings</div>
+        <div className={style.header__btn}>Выход</div>
       </div>
     </header>
   );
