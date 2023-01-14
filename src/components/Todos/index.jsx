@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-
 import { doc, getDoc } from "firebase/firestore";
+import { auth } from '../../db/firebase';
 import { db } from '../../db/firebase';
 import Todos from '../../view/Todos';
 import Loading from '../../view/Loading';
@@ -11,13 +11,15 @@ const TodosComponent = () => {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    getDoc(doc(db, 'artemColl', '2021-11-1'))
-      .then((response) => {setTodos(response.data())})
-      .then(() => setIsLoading(false))
-  }, [])
+    if(auth.currentUser){
+      getDoc(doc(db, auth.currentUser.uid, 'tasks'))
+        .then((response) => {setTodos(response.data())})
+        .then(() => setIsLoading(false))
+    }
+  }, [auth])
 
 
-  return isLoading ? <Loading /> :<Todos todos={todos['todos']} />;
+  return isLoading ? <Loading /> :<Todos tasks={todos.tasks} />;
 };
 
 export default TodosComponent;
