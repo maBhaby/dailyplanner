@@ -15,6 +15,10 @@
     height: 52px;
     border-bottom: 2px solid var(--hover-dark);
     letter-spacing: 0px;
+    &[data-curr="true"]{
+      border-color: rgb(75, 75, 255);
+      color: rgb(75, 75, 255);
+    }
     &_day{
       opacity: .2;
     }

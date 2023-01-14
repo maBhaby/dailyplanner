@@ -1,5 +1,16 @@
 .user_data{
     &__title{
-        text-align: left;
+        text-align: center;
+    }
+    &__item{
+        min-height: 40px;
+        border-bottom:1px solid black ;
+        font-size: 20px;
+        line-height: 40px;
+        display: flex;
+        justify-content: space-between;
+        &:not(:last-child){
+            margin-bottom: 10px;
+        }
     }
 }

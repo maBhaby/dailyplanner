@@ -8,8 +8,8 @@ const AuthForm = ({ formik }) => {
   const { values, handleChange, errors, handleSubmit, dirty, isValid } = formik;
   return (
     <div className={style.wrap}>
-      <h3>ZAIDI</h3>
-      <p>lets get started with a few simple steps!</p>
+      <h3>Вход</h3>
+      <p>давайте начнем с нескольких простых шагов!</p>
       <form onSubmit={handleSubmit} className={style.form}>
         <Input
           label="E-mail"

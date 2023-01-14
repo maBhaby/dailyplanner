@@ -9,8 +9,8 @@ const RegistationForm = ({ formik }) => {
   const disabledButton = !isValid && values;
   return (
     <div className={style.wrap}>
-      <h3>Welcome</h3>
-      <p>lets get started with a few simple steps!</p>
+      <h3>Зарегестрируйся</h3>
+      <p>давайте начнем с нескольких простых шагов!</p>
       <form onSubmit={handleSubmit} className={style.form}>
         <Input
           label="E-mail"

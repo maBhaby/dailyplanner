@@ -3,8 +3,9 @@
   &__btn {
     background-color: #eae;
     color: black;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    text-transform: uppercase;
     border-radius: 50%;
     @include font(18);
     @include flex(cc);

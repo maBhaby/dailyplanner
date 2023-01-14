@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { signOut } from 'firebase/auth';
+
 import { doc, getDoc } from "firebase/firestore";
 import { auth, db } from '../../db/firebase';
 import Todos from '../../view/Todos';
@@ -12,18 +12,8 @@ const TodosComponent = () => {
       .then((response) => setTodos(response.data()))
   }, [])
 
-  const handelClick = () => {
-    console.log('yes');
-    signOut(auth)
-      .then(() => {
-        console.log('yes');
-      })
-      .catch((error) => {
-        // An error happened.
-      });
-  };
 
-  return <Todos todos={todos} buttonClick={handelClick} />;
+  return <Todos todos={todos} />;
 };
 
 export default TodosComponent;

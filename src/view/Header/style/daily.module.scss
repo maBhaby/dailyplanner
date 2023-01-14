@@ -10,4 +10,17 @@
     display: flex;
     gap: 20px;
   }
+  &__exit{
+    background-color: rgb(170, 174, 238);
+    color: black;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    @include font(18);
+    @include flex(cc);
+    img{
+      width: 30px;
+      height: 30px;
+    }
+  }   
 }

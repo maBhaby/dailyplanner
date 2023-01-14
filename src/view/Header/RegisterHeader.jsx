@@ -1,7 +1,6 @@
 import React from 'react';
 import { logoRegistration } from '../../assets/image';
 import styles from './style/register.module.scss';
-import classNames from 'classnames';
 
 const RegisterHeader = () => {
   return (
@@ -13,7 +12,6 @@ const RegisterHeader = () => {
         src={logoRegistration}
         alt="logo"
       />
-      <button className={classNames('btn_reset', styles.header__btn)}>Sing In</button>
     </header>
   );
 };
