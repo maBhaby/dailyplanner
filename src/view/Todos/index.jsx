@@ -3,6 +3,7 @@ import styles from './styles/index.module.scss';
 import dayjs from 'dayjs';
 import weekday from 'dayjs/plugin/weekday'
 import Todo from '../../components/Todo';
+import CreatedTodo from '../Todo/CreatedTodo'
 
 dayjs.extend(weekday)
 const testArray = [
@@ -37,7 +38,8 @@ const testArray = [
   },
 ]
 
-const Todos = ({ todos }) => {
+const Todos = ({todos}) => {
+  useEffect(() => {console.log(todos)}, [todos])
   return (
     <ul className={styles.todos}>
       {
@@ -50,10 +52,16 @@ const Todos = ({ todos }) => {
             <div className={styles.todos__body}>
               {
                 todos && todos.length > 0 && 
-                  todos.map((el, i) => (
-                    <Todo key={i} />
-                  ))
+                  todos.map((el, i) => {
+                    console.log(el)
+                    return(
+                      <CreatedTodo>
+                        sssssssss sssssssssssssssss
+                      </CreatedTodo>
+                    )
+                  })
               }
+              <Todo key={i} />
             </div>
           </li>
         ))
